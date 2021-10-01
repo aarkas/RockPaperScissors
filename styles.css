@@ -37,6 +37,11 @@ h1 {
     line-height: 1;
 }
 
+h2 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
 h4 {
     color: hsl(229, 64%, 46%);
     margin: 0;
@@ -60,7 +65,7 @@ h4 {
 
 .rules {
     border: 2px solid white;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: transparent;
     text-transform: uppercase;
     font-size: 20px;
@@ -71,6 +76,7 @@ h4 {
     color: white;
     font-family: inherit;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 main {
@@ -103,6 +109,11 @@ main::before {
     border: none;
     border-radius: 50%;
     margin: 0 25px;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.95);
 }
 
 .btn .wrapper {
@@ -126,4 +137,77 @@ main::before {
 
 .btn-rock {
     background: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+}
+
+.btn2 {
+    border: 2px solid white;
+    border-radius: 8px;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;    
+    color: hsl(229, 64%, 46%);
+    font-family: inherit;
+    padding: 10px 20px;   
+    cursor: pointer;
+}
+
+.selection {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.selection .btn {
+    transform: scale(1.5);
+    margin: 50px 100px;
+}
+
+.text {
+    font-size: 3rem;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    line-height: 1; 
+}
+
+.showRules {
+    background-color: lightgray;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.showRules button {
+    background-color: transparent;
+    margin-top: 80px;
+    border: none;
+    transform: scale(1.4);
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .down {
+        order: 1;
+    }
+
+    .selection {
+        width: 500px;
+    }
+
+    .selection .btn {
+        margin: 50px 20px;
+        transform: scale(1);
+    }
 }

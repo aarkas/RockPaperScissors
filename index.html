@@ -26,26 +26,54 @@
       </div>
     </header>
 
-    <main>
-      <button class="btn btn-paper" data-choice="paper">
+    <main id="main">
+      <button class="btn btn-paper pick" data-choice="paper">
         <span class="wrapper">
         <img src="images/icon-paper.svg" alt="Paper"/>
         </span>
       </button>
-      <button class="btn btn-scissors" data-choice="scissors">
+      <button class="btn btn-scissors pick" data-choice="scissors">
         <span class="wrapper">
         <img src="images/icon-scissors.svg" alt="Scissors"/>
         </span> 
       </button>
-      <button class="btn btn-rock" data-choice="rock">
+      <button class="btn btn-rock pick" data-choice="rock">
         <span class="wrapper">
         <img src="images/icon-rock.svg" alt="Rock"/>
         </span>
       </button>
-
     </main>
 
-    <button class="rules">Rules</button>
+    <div class="showRules" id="showRules">
+        <img src="/images/image-rules.svg" alt="rules"/>
+        <button id="close"><img src="images/icon-close.svg" alt="close"></button>
+    </div>
+    <button class="rules" id="open">Rules</button>
+  </div>
+
+  <div class="selection" id="selection"> 
+    <div>
+      <h2>You picked</h2>
+      <button class="btn btn-paper" id="user">
+        <span class="wrapper">
+        <img src="images/icon-paper.svg" alt="Paper"/>
+        </span>
+      </button>
+    </div>
+    <div class="down">
+      <p class="text">
+      You <span id="win">win</span>
+      </p>
+      <button class="btn2" id="playAgain">Play again</button>
+    </div>
+    <div>
+      <h2>The house picked</h2>
+      <button class="btn btn-rock" id="computer">
+        <span class="wrapper">
+        <img src="images/icon-rock.svg" alt="Rock"/>
+        </span>
+      </button>
+    </div>
   </div>
   
 </body>
